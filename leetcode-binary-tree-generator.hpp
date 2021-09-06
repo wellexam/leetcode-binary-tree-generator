@@ -56,7 +56,7 @@ TreeNode *BTGenerator(string str) {
     parents.push_back(root);
     node_vals.pop_front();
     while (!node_vals.empty()) {
-        for (; count < product; ++count) {
+        for (; count < product && !node_vals.empty(); ++count) {
             if (node_vals[0] != 1 << 31) {
                 auto temp = new TreeNode(node_vals[0]);
                 if (count % 2) {
